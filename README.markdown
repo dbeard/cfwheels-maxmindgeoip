@@ -67,3 +67,7 @@ History
 ------------
 
 Version 0.1 - Initial Release
+
+Version 0.1.1 - Fixed issue with variables not being wrapped in ##
+
+Version 0.2 - Index now reloads on application reload
