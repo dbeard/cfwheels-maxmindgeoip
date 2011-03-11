@@ -29,13 +29,13 @@
 	</cffunction>
 	
 	<cffunction name="getIDByIP" returntype="any">
-		<cfargument name="ip" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="ip" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfreturn $getLookupService().getID(arguments.ip)/>
 	</cffunction>
 	
 	<cffunction name="getCountryByIP" returntype="any">
-		<cfargument name="ip" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="ip" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfscript>
 			jCountry = $getLookupService().getCountry(arguments.ip);
@@ -51,7 +51,7 @@
 	</cffunction>
 	
 	<cffunction name="getRegionByIP" returntype="any">
-		<cfargument name="ip" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="ip" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfscript>
 			jRegion = $getLookupService().getRegion(arguments.ip);
@@ -68,13 +68,13 @@
 	</cffunction>
 	
 	<cffunction name="getOrgByIP" returntype="any">
-		<cfargument name="ip" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="ip" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfreturn $getLookupService().getOrg(arguments.ip)/>
 	</cffunction>
 	
 	<cffunction name="getLocationByIP" returntype="any">
-		<cfargument name="ip" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="ip" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfscript>
 			jLocation = $getLookupService().getLocation(arguments.ip);
@@ -99,7 +99,7 @@
 	
 	<cffunction name="getIPDistance" returntype="any">
 		<cfargument name="toIP" type="string" required="true"/>
-		<cfargument name="fromIP" type="string" default="cgi.REMOTE_ADDR"/>
+		<cfargument name="fromIP" type="string" default="#cgi.REMOTE_ADDR#"/>
 		
 		<cfscript>
 			jLocationT = $getLookupService().getLocation(arguments.toIP);
